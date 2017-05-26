@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<%# if current_user %>
+  <form action="<%= session_url %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Log out">
+  </form>
+<%# end  %>
 <%= yield %>
 
 </body>
